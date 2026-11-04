@@ -16,3 +16,25 @@ Use numbered entries or timestamps. Use Markdown formatting to make it easy to r
 
 Explain the causes, your repairs, and the evidence that verifies them. Identify
 anything still uncertain or unresolved. Make code changes in `feed.py`.
+
+--ran the code with 'y' as it is the program returned Your Feed:
+- New campus coffee shop opens
+- Python workshop this Friday
+- Robotics club builds a drone
+- New campus coffee shop opens
+- Python workshop this Friday
+- Robotics club builds a drone
+- New campus coffee shop opens
+- Python workshop this Friday
+- Robotics club builds a drone
+- New campus coffee shop opens
+- Python workshop this Friday
+- Robotics club builds a drone
+
+Loaded 12 posts.
+-- added if not new_posts:
+        print("No more posts to load.")
+        break this stops the loop when there are no more posts available
+
+-- added =+ 1 it allows the program to run to the next page 
+
