@@ -68,3 +68,21 @@ This is the results we have gotten
         print("Session ended.")
         break added this so that if the user enters y it will add 1 
         if the user enters N it will break print session end 
+
+ -- moved  print("\nYour Feed:") from line 33 to line 31 because my program kept running Your Feed: before every individual post
+ causing it to look spaced out like this.
+ 
+  Your Feed:
+- New library study spaces
+
+Loaded 3 new posts.
+
+Scroll? (y/n): y
+
+Your Feed:
+- Campus Wi-Fi gets upgraded
+
+Your Feed:
+- CS students build a game
+
+-- with moving it to line 31 it took your feed out of the loop 
