@@ -22,22 +22,35 @@ page = 0
 feed = []
 
 while True:
-    new_posts = fetch_page(page)
+    current_posts = fetch_page(page)
 
-    for post in new_posts:
+    if not current_posts:
+        print("No more posts.")
+        break 
+
+    for post in current_posts:
         feed.append(post)
 
-    print("\nYour Feed:")
+    print("\nYour Feeed:")
     for post in feed:
-        print("-", post)
+        print("_", post)
+    print(f"\nTotal posts loaded: {len(feed)}")
+    if len(current_posts) < PAGE_SIZE or len(feed) == len(posts):
+     print("No more posts.")
+     break
 
-    print(f"\nLoaded {len(feed)} posts")
+    
+    while True:
+        action = input("\nScroll? (y/n): ").strip().lower()
+            
+        if action == 'y':
+            page += 1
+            break
+        elif action == 'n':
+            break
+        else:
+             print(" Enter 'y' or 'n' ")
 
-    action = input("\nScroll? (y/n): ")
-
-    if action == "n":
-        break
-
-    page = 0
-
+    if action == 'n':       
+     break   
 print("Session ended.")
